@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hyrious' Marked.js CJK-friendly Demo</title>
+	<meta name="color-scheme" content="light dark">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hyrious/github-markdown-css@0.2.4/github-markdown.css">
+	<link rel="stylesheet" href="dist/main.css">
+</head>
+<body data-theme="">
+	<div id="app" class="app">
+		<section class="input">
+			<header>
+				<strong>Input</strong>
+				<button id="$clear">Clear</button>
+				<button id="$example">Example</button>
+				<button id="$official">See in Official Demo</button>
+			</header>
+			<textarea id="$input">**你好，**世界。</textarea>
+		</section>
+		<section class="output">
+			<header>
+				<button id="$preview" disabled>Preview</button>
+				<button id="$html">HTML</button>
+			</header>
+			<article class="markdown-body" id="$markdown"></article>
+			<pre id="$source" style="display: none;"></pre>
+		</section>
+	</div>
+	<script src="dist/main.js"></script>
+</body>
+</html>
