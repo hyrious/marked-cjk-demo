@@ -1,0 +1,53 @@
+/* src/style.css */
+body {
+  background-color: var(--bgColor-default);
+  color: var(--fgColor-default);
+}
+body {
+  margin: 0;
+}
+html,
+body,
+.app {
+  height: 100%;
+}
+.app {
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;
+  > section {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid var(--borderColor-default);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    > header {
+      line-height: 2;
+      padding: 0 10px;
+      border-bottom: 1px solid var(--borderColor-default);
+    }
+    > :is(textarea, article, pre) {
+      flex: 1;
+      display: block;
+    }
+    > textarea {
+      background-color: transparent;
+      border: none;
+      padding: 1ch 10px;
+      resize: none;
+      width: stretch;
+    }
+    > article {
+      padding: 10px;
+    }
+    > pre {
+      margin: 0;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+  }
+}
