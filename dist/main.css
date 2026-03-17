@@ -17,14 +17,19 @@ body,
   padding: 20px;
   box-sizing: border-box;
   gap: 10px;
+  @media (max-width: 768px) {
+    & {
+      grid-template: 1fr 1fr / auto;
+    }
+  }
   > section {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
     border: 1px solid var(--borderColor-default);
     box-sizing: border-box;
-    border-radius: 5px;
-    overflow: hidden;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     > header {
       line-height: 2;
       padding: 0 10px;
@@ -40,6 +45,10 @@ body,
       padding: 1ch 10px;
       resize: none;
       width: stretch;
+      &:focus-visible {
+        outline: var(--borderColor-accent-emphasis) solid 1px;
+        outline-offset: -1px;
+      }
     }
     > article {
       padding: 10px;
